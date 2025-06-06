@@ -16,4 +16,4 @@ The Trending page is updated weekly with the best videos
 
 The site is responsive and adapts to different devices and screen sizes
 
-Link to the site: https://fapnation.netlify.app/
+Link to the site: https://fapnation.vercel.app/
