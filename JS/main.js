@@ -200,7 +200,7 @@ function stampaCards(result) {
     cardsVideo.innerHTML = "";
     btnNext.className = "btn btn-outline-warning";
     if (arrayVideo.length == 0) {
-        intestazione.innerHTML = "Nessun risultato trovato";
+        intestazione.innerHTML = "No results found";
         btnNext.className = "btn btn-outline-warning disabled";
         return;
     }
