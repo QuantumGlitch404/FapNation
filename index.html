@@ -169,6 +169,23 @@
  <ins class="eas6a97888e2" data-zoneid="5590228" data-keywords="keywords" data-sub="123450000"></ins> 
  <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
  <script type='text/javascript' src='//jackalclenchedbedside.com/18/1f/14/181f143e5587531e9f64f42f9b936080.js'></script>
+ <script>
+// Disable right-click
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// Disable F12 / Ctrl+Shift+I / Ctrl+U
+document.onkeydown = function(e) {
+  if (e.keyCode == 123) { return false; } // F12
+  if (e.ctrlKey && e.shiftKey && (
+      e.keyCode == 'I'.charCodeAt(0) || 
+      e.keyCode == 'J'.charCodeAt(0) || 
+      e.keyCode == 'C'.charCodeAt(0))) {
+    return false;
+  }
+  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+};
+</script>
+
 </body>
 
 <footer>
