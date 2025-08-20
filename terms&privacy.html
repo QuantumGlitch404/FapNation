@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Privacy Policy - FapNation</title>
+    <link rel="icon" type="image/png" href="./img/no-minors.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-orange: #ff6900;
+            --secondary-orange: #ff8533;
+            --accent-orange: #ffb366;
+            --pure-black: #000000;
+            --dark-gray: #0a0a0a;
+            --medium-gray: #1a1a1a;
+            --light-gray: #2a2a2a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--pure-black);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            background: var(--dark-gray);
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid var(--light-gray);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-tab {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            padding: 20px 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-tab:hover {
+            color: var(--primary-orange);
+            background: rgba(255, 105, 0, 0.05);
+        }
+
+        .nav-tab.active {
+            color: var(--primary-orange);
+            border-bottom-color: var(--primary-orange);
+            background: rgba(255, 105, 0, 0.1);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-card {
+            background: var(--medium-gray);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-orange), var(--secondary-orange));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 105, 0, 0.15);
+            border-color: var(--primary-orange);
+        }
+
+        .section-card:hover::before {
+            opacity: 1;
+        }
+
+        .section-card h2 {
+            color: var(--primary-orange);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-number {
+            background: var(--primary-orange);
+            color: var(--pure-black);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .section-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .section-card ul {
+            color: var(--text-secondary);
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        .section-card li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: rgba(255, 105, 0, 0.1);
+            border: 1px solid rgba(255, 105, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-orange);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            border-top: 1px solid var(--light-gray);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-orange);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-tab {
+                padding: 15px 20px;
+                font-size: 1rem;
+            }
+
+            .section-card {
+                padding: 20px;
+            }
+
+            .footer-links {
+                gap: 20px;
+            }
+        }
+
+        /* Scrollbar styling for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-gray);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-orange);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-orange);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Terms & Privacy Policy</h1>
+            <p>Your privacy and our terms of service explained clearly and transparently</p>
+        </div>
+    </header>
+
+    <nav class="nav-tabs">
+        <button class="nav-tab active" onclick="showSection('terms')">Terms & Conditions</button>
+        <button class="nav-tab" onclick="showSection('privacy')">Privacy Policy</button>
+    </nav>
+
+    <main class="main-content">
+        <!-- Terms Section -->
+        <div id="terms" class="content-section active">
+            <div class="section-card">
+                <h2><span class="section-number">1</span>Acceptance of Terms</h2>
+                <p>By accessing or using FapNation, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, you must discontinue use of our website immediately.</p>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">2</span>Eligibility & Age Verification</h2>
+                <p>You must be at least 18 years of age (or the legal age of majority in your jurisdiction, whichever is higher) to access this website. By using our services, you represent and warrant that you meet this age requirement.</p>
+                <div class="highlight-box">
+                    <h3>⚠️ Important Notice</h3>
+                    <p>Minors are strictly prohibited from accessing this website. We take age verification seriously and may implement additional verification measures.</p>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">3</span>Content & Intellectual Property</h2>
+                <p>FapNation operates as a content aggregation platform and does not host files directly. All videos, images, and other media content are provided by third-party platforms and embedded from external sources.</p>
+                <ul>
+                    <li>We do not claim ownership of third-party content</li>
+                    <li>Content creators retain their intellectual property rights</li>
+                    <li>We respond to valid DMCA takedown requests promptly</li>
+                    <li>Users are responsible for respecting copyright laws</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">4</span>User Conduct & Restrictions</h2>
+                <p>Users must comply with all applicable laws and regulations. The following activities are strictly prohibited:</p>
+                <ul>
+                    <li>Attempting to scrape, copy, or download content without authorization</li>
+                    <li>Using automated tools or bots to access our services</li>
+                    <li>Engaging in any illegal activities through our platform</li>
+                    <li>Attempting to circumvent security measures</li>
+                    <li>Harassment or abuse of other users or our staff</li>
+                </ul>
+                <p><strong>Violations will result in immediate account termination and potential legal action.</strong></p>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">5</span>Disclaimers & Limitations</h2>
+                <p>Our services are provided "as is" without warranties of any kind. We disclaim all liability for:</p>
+                <ul>
+                    <li>Third-party content accuracy or availability</li>
+                    <li>Service interruptions or technical issues</li>
+                    <li>Damages resulting from website use</li>
+                    <li>Content provided by external platforms</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">6</span>Modifications & Updates</h2>
+                <p>We reserve the right to modify these terms at any time without prior notice. Continued use of our website after changes constitutes acceptance of the updated terms. We recommend reviewing this page periodically for updates.</p>
+            </div>
+        </div>
+
+        <!-- Privacy Section -->
+        <div id="privacy" class="content-section">
+            <div class="section-card">
+                <h2><span class="section-number">1</span>Information We Collect</h2>
+                <p>We are committed to protecting your privacy. We only collect minimal, non-personal information necessary to provide our services:</p>
+                <ul>
+                    <li><strong>Automatic Data:</strong> Browser type, device information, IP address (anonymized)</li>
+                    <li><strong>Usage Analytics:</strong> Pages visited, time spent, referral sources</li>
+                    <li><strong>Technical Data:</strong> Operating system, screen resolution, connection type</li>
+                </ul>
+                <div class="highlight-box">
+                    <h3>🔒 Privacy Commitment</h3>
+                    <p>We do NOT collect, store, or track personal identity information, names, email addresses, or any personally identifiable data.</p>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">2</span>Cookies & Local Storage</h2>
+                <p>We use cookies and similar technologies to enhance your browsing experience and analyze website performance:</p>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Required for basic website functionality</li>
+                    <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our site</li>
+                    <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+                </ul>
+                <p>You can disable cookies in your browser settings at any time, though this may affect website functionality.</p>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">3</span>Third-Party Services</h2>
+                <p>Our website integrates with various third-party services and platforms:</p>
+                <ul>
+                    <li><strong>Content Providers:</strong> Embedded videos from external platforms</li>
+                    <li><strong>Analytics Services:</strong> Anonymous usage statistics</li>
+                    <li><strong>CDN Services:</strong> Fast content delivery</li>
+                </ul>
+                <p><strong>Important:</strong> These third parties have their own privacy policies. We are not responsible for their data practices and recommend reviewing their policies separately.</p>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">4</span>Data Security & Protection</h2>
+                <p>We implement industry-standard security measures to protect your data:</p>
+                <ul>
+                    <li>SSL/HTTPS encryption for all data transmission</li>
+                    <li>Regular security audits and updates</li>
+                    <li>Limited data retention policies</li>
+                    <li>Secure server infrastructure</li>
+                </ul>
+                <p>While we strive to protect your information, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">5</span>Your Rights & Choices</h2>
+                <p>You have control over your privacy:</p>
+                <ul>
+                    <li><strong>Browser Settings:</strong> Control cookies and local storage</li>
+                    <li><strong>Do Not Track:</strong> We respect browser DNT signals</li>
+                    <li><strong>Data Requests:</strong> Contact us for data-related inquiries</li>
+                    <li><strong>Opt-Out:</strong> You may opt out of analytics tracking</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="section-number">6</span>Policy Updates</h2>
+                <p>This Privacy Policy may be updated periodically to reflect changes in our practices or legal requirements. We will indicate the date of the latest revision at the top of this page. Significant changes will be communicated through prominent notices on our website.</p>
+                <p><strong>Last Updated:</strong> January 2025</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 FapNation. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="#" onclick="showSection('terms')">Terms & Conditions</a>
+                <a href="#" onclick="showSection('privacy')">Privacy Policy</a>
+                <a href="mailto:officialfapnation@gmail.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Add smooth hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.section-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.01)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
