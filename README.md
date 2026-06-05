@@ -4,7 +4,7 @@
 
 **⚠️ STRICTLY 18+ ONLY** - This project contains explicit adult material. Access is restricted to adults aged 18 or older (or the legal age of majority in your jurisdiction). Minors are strictly prohibited.
 
-![FapNation Logo](img/Fap-tap.png)
+![FapNation Logo](img/no-minors.png)
 
 ## ✨ Key Features
 
