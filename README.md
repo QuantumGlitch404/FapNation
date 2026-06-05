@@ -1,116 +1,196 @@
-```markdown
-# FapNation 🔞
+# FapNation - Ultimate Adult Video Browser
 
+**FapNation** is a sleek, high-performance, fully responsive web application designed for seamless browsing of premium adult content. It leverages the powerful **Eporner API** to fetch and display videos directly from Eporner's high-quality servers, allowing users to enjoy videos in resolutions up to 4K and beyond without any hosting burden on this platform.
+
+**⚠️ STRICTLY 18+ ONLY** - This project contains explicit adult material. Access is restricted to adults aged 18 or older (or the legal age of majority in your jurisdiction). Minors are strictly prohibited.
+
+![FapNation Logo](img/Fap-tap.png)
+
+## ✨ Key Features
+
+- **Multi-Filter Search System**:
+  - **Keyword Search** (default): Search by any term, actor, title, or phrase.
+  - **Category Browsing**: Browse popular categories like Amateurs, Anal, Big Ass, Big Tits, Blowjob, MILF, Teens, Hentai, Interracial, and dozens more.
+  - **Duration Filter**: Toggle between Short Videos and Long Videos (longest videos available).
+  - **Section Filter**: Straight (Hetero), Gay, Trans, Lesbian content separation.
+
+- **Infinite Pagination**: Navigate up to 100 pages of content (30 videos per page).
+
+- **Dynamic Hover Previews**:
+  - On desktop: Hover over any thumbnail to see a smooth cycling preview of multiple frames from the video.
+  - On mobile: Tap and hold on the thumbnail for the same preview experience.
+
+- **Dedicated Pages**:
+  - **Home**: Latest releases with the freshest content.
+  - **Trending**: Weekly top-performing videos (updated automatically via Eporner’s `top-weekly` order).
+
+- **High-Quality Thumbnails & Metadata**:
+  - Eye-catching thumbnails with view counts and video durations displayed.
+  - Truncated but informative titles.
+  - Direct embed links to Eporner player for instant high-res playback.
+
+- **Fully Responsive Design**:
+  - Optimized for desktop, tablet, and mobile devices.
+  - Smooth animations, dark theme, modern card-based UI.
+
+- **Fast Loading & UX**:
+  - Loading spinner during API calls.
+  - Keyboard support (Enter key for searches).
+  - Smooth scrolling and intuitive navigation.
+
+- **Privacy-Focused**:
+  - No user accounts, no tracking beyond basic analytics.
+  - All content embedded from Eporner – no direct hosting.
+
+## 🛠️ Tech Stack
+
+- **Frontend**:
+  - HTML5, CSS3 (custom responsive stylesheets)
+  - Vanilla JavaScript (no frameworks for maximum performance)
+  - Bootstrap 5 components for layout and responsiveness
+
+- **API Integration**:
+  - Eporner Video Search API v2 (`https://www.eporner.com/api/v2/video/search/`)
+  - Supports parameters: `query`, `page`, `per_page`, `order`, `lq`, `gay`, etc.
+
+- **Fonts**:
+  - Gotham Black (headings)
+  - PT Sans Bold (titles)
+
+- **Assets**:
+  - Custom icons for views, duration, trending (campfire emoji style)
+
+- **Deployment**:
+  - Static hosting ready (Vercel, Netlify, GitHub Pages, etc.)
+  - Live demo: [https://fapnation.vercel.app/](https://fapnation.vercel.app/)
+
+## 📁 Project Structure
 
 ```
-
-
-
-```
-
----
-
-## ⛔ WARNING: ADULT CONTENT (18+)
-**FapNation** is an unrated, fully uncensored, open-source adult tube and interactive media streaming platform web interface. This repository contains code for serving, rendering, and managing explicit 18+ adult content landscapes, aggregation portals, and premium UI directories. 
-
----
-
-## 🚀 Architectural Overview
-
-FapNation is structured as an ultra-high performance, client-optimized, zero-bloat web platform built to handle massive content grids. By utilizing asynchronous JavaScript matrix pipelines alongside modular rendering patterns, it delivers instantaneous filtering, content queries, and stream indexing with minimal DOM friction.
-
-
-```
-
 FapNation-main/
-├── index.html                  # Core Hub & Primary Video Directory Grid Terminal
-├── best.html                   # High-Conversion Matrix Filtering Template
-├── terms&privacy.html          # Legal Gatekeeping, Age Verification (18+ Compliance)
-├── README.md                   # System Architecture Documentation
+├── index.html                 # Main homepage
+├── best.html                  # Alternative/trending-focused page
+├── terms&privacy.html         # Legal pages
 ├── JS/
-│   └── main.js                 # Engine Control, Filter Pipelines & UI State Machine
+│   └── main.js                # Core JavaScript logic
 ├── style/
-│   ├── stylesheet.css          # Primary Interface Design & Dynamic Layout System
-│   └── testcss.css             # Sandbox CSS Environment for UI Layout Experiments
+│   ├── stylesheet.css         # Primary dark/orange theme
+│   └── testcss.css            # Alternative blue theme (for experimentation)
 ├── fonts/
-│   ├── Gotham-Black.otf        # Branding Display Geometry Font
-│   └── PTSans-Bold.ttf         # High-Legibility Metadata Rendering Font
-└── img/                        # Explicit UI Vector Marks & Icons
-├── Fap-tap.png             # Application Brand Asset
-├── campfire.png            # Trending/Hot Contextual Status Badge
-├── eye.png                 # Real-time View Metric Tracking Icon
-├── clock-circular-outline.png # Upload Temporal Delta Reference Vector
-└── no-minors.png           # Rigid Age-Gate Regulatory Compliance Label (18+)
-
+│   ├── Gotham-Black.otf
+│   └── PTSans-Bold.ttf
+├── img/
+│   ├── Fap-tap.png            # Logo
+│   ├── campfire.png           # Trending icon
+│   ├── eye.png                # Views icon
+│   ├── clock-circular-outline.png # Duration icon
+│   └── no-minors.png          # Age warning
+└── README.md                  # This file
 ```
 
----
+## 🚀 Installation & Local Setup
 
-## 🛠️ In-Depth File & Logic Component Analytics
-
-### 🎛️ The Engine Control Tower: `JS/main.js`
-The engine driving this platform runs on highly efficient vanilla client-side script optimization pipelines. `main.js` is engineered to handle massive arrays of media arrays without server stress:
-* **State Management:** Intercepts real-time client interaction (search keys, navigation index toggles, tags, category sorting arrays) and pipes them into active rendering states.
-* **On-the-Fly Category Pipelines:** Implements strict data filter passes to process category requests (e.g., top-rated, hot, niche tags) instantaneously, suppressing standard browser refresh pipelines.
-* **Metric Calculation Hooks:** Maps view data structures (`eye.png`) and temporal uploads (`clock-circular-outline.png`) dynamically over incoming asset objects.
-
-### 🖼️ Front-Facing Matrix Ports: `*.html`
-* **`index.html` (The Main Terminal):** The gateway structure designed for maximal content density. It balances raw stream thumbnail tiles with modern navigation components, scaling perfectly across high-traffic desktop and mobile sessions.
-* **`best.html` (The Premium Matrix):** Uses a specialized filter layout array dedicated exclusively to isolating top-performing video nodes based on user ratings, curation scores, and community interaction metrics.
-* **`terms&privacy.html` (Legal Containment Barrier):** Mandatory compliance infrastructure. Integrates legal documentation, platform disclaimers, cookie tracking flags, and explicit warning layouts to shield the network provider from global regulatory violations.
-
-### 🎨 Design Tokens & UI Layer: `style/`
-* **`stylesheet.css`:** The production-grade master engine for layout layout control. It utilizes CSS Grid and Flexbox mechanics tailored specifically for continuous scroll media streams, low-latency imagery loading states, and premium dark-theme UI aesthetics.
-* **`testcss.css`:** An independent structural sandbox file. This layer isolates layout breaking implementations or custom video frame scales before compiling updates into production.
-
-### 🖼️ Core Media Assets & Compliance Hooks: `img/` & `fonts/`
-* **Compliance Enforcer (`no-minors.png`):** Prominently called on initialization vectors to visually dictate clear age barriers across global network distribution lines.
-* **Asset Tracking Indicators (`eye.png` & `clock-circular-outline.png`):** Light, ultra-low resource SVG/PNG representations used to cleanly append historical traffic analytics metrics beneath content thumbnails.
-* **Branding Footprints:** Uses `Gotham-Black.otf` for extreme structural visibility on primary headers and title callouts, while mapping `PTSans-Bold.ttf` for micro-metadata and duration counts.
-
----
-
-## ⚡ Deployment & Running The System
-
-### Local Sandbox Boot
-Because FapNation uses direct modular JavaScript routing streams, you do not require bloated compiler environments. 
-
-1. Clone the master build repository directly:
+1. **Clone or Download**:
    ```bash
-   git clone [https://github.com/your-repo/FapNation-main.git](https://github.com/your-repo/FapNation-main.git)
+   git clone <your-repo-url>
+   # or download and extract FapNation-main.zip
+   ```
 
+2. **Serve Locally**:
+   - Use any static server:
+     ```bash
+     # Python
+     python -m http.server 8000
+     
+     # Node.js (with serve)
+     npx serve
+     
+     # Or open index.html directly in browser
+     ```
+
+3. **Open in Browser**:
+   - Navigate to `http://localhost:8000`
+   - Start fapping immediately!
+
+**Note**: Since it's a static site with API calls, no backend or database setup required.
+
+## 🔧 How It Works
+
+### Search Logic (`main.js`)
+
+- `tipoRicerca` variable controls the active filter (1=Category, 2=Keyword, etc.).
+- `Ricerca()` function constructs appropriate Eporner API URLs based on selection.
+- `stampaCards()` renders video cards with hover/ touch handlers.
+- `CreaHome()` and `CreaTrending()` for dedicated pages.
+
+### Hover Preview System
+
+```javascript
+// Cycles through thumbnail frames every 350ms
+function CambiaImmagineOnHover(cardElement, thumbBase) { ... }
 ```
 
-2. Navigate directly to the deployment block:
-```bash
-cd FapNation-main
+Thumbnails follow Eporner naming like `1_`, `2_`, ..., `15_` for previews.
 
-```
+### Pagination
 
+- `pagina` state (1-100)
+- Next/Previous buttons update content and maintain filter state.
 
-3. Initialize via an optimized local node server or Python binding layer to allow proper CORS execution on dynamic assets:
-```bash
-# If using Python 3
-python3 -m http.server 6969
+## 🎨 Customization
 
-# If using NodeJS
-npm install -g local-web-server
-ws --port 6969
+- **Themes**: Switch between `stylesheet.css` (orange accents) and `testcss.css` (blue accents) by updating links in HTML.
+- **Categories**: Edit options in `<select id="categoria">` in HTML files.
+- **API Tweaks**: Modify base URLs or parameters in `main.js` for different sorting (latest, top-weekly, etc.).
+- **Per Page**: Change `per_page=30` to higher/lower values.
 
-```
+## ⚖️ Legal & Disclaimer
 
+- **Content Ownership**: All videos belong to their respective creators and are hosted on Eporner.com. FapNation is purely an aggregator/interface.
+- **DMCA**: We respect copyright. Contact for removal requests.
+- **Age Gate**: Strong emphasis on 18+ compliance.
+- **No Liability**: Provided "as is". Use at your own risk. We are not responsible for content accessed via third-party embeds.
 
-4. Access the fully operational interface portal directly via your browser terminal: `http://localhost:6969`
+See `terms&privacy.html` for full details.
+
+## 📈 Roadmap / Future Enhancements
+
+- Video player integration directly on site (with Eporner embed improvements).
+- Favorites/watchlist using localStorage.
+- Advanced filters (quality, HD/4K only, specific actors).
+- Dark/Light mode toggle.
+- Infinite scroll instead of pagination.
+- Search history and suggestions.
+- Multi-language support.
+- PWA capabilities for offline thumbnail caching.
+
+## 🤝 Contributing
+
+Contributions welcome! Especially:
+
+- Bug fixes in JS API handling.
+- UI/UX improvements.
+- Additional themes or accessibility features.
+- Performance optimizations.
+
+1. Fork the repo
+2. Create a feature branch
+3. Submit PR with detailed description
+
+## 📬 Contact & Support
+
+- **Developer**: QuantumGlitch404
+- **Live Site**: https://fapnation.vercel.app/
+- **Issues**: Open GitHub issues for bugs or feature requests.
+
+## ⭐ Star This Repo
+
+If this project helps you find quality fap material efficiently, please star it! Your support keeps the development going.
 
 ---
 
-## 🛠️ Development & Expansion Roadmap
+**Made with pure lust for high-quality porn browsing experience.**
 
-To expand the infrastructure of FapNation-main, developers should scale according to these design criteria:
+**Unleash your inner degenerate responsibly.**
 
-1. **Adding Media Nodes:** When pushing new video arrays to `index.html`, preserve the card skeleton component structure bounded by standard design tokens defined inside `stylesheet.css`.
-2. **Extending Script Logic:** Keep any performance scripts isolated inside `JS/main.js`. Implement clean event delegation models on custom navigation selectors to ensure instant render times when parsing large pools of adult media collections.
-
-```
-
-```
+**© 2025 FapNation. All Rights Reserved.**
